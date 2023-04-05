@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "4447d066-95c5-4de7-bb8b-553cc2379169",
+		"name": "Advanced Programming",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25369338"
+	},
+	"item": [
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"test Product\",\r\n    \"price\":250.0,\r\n    \"category\":{\r\n        \"id\": 403\r\n    },\r\n    \"brand\":{\r\n        \"id\": 153\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admins/products/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"products",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Test Category2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admins/categories/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"categories",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Brand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Test Brand2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admins/brands/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"brands",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Brands For Admins",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW5kdXVzYW5qYXlhQGdtYWlsLmNvbSIsImlhdCI6MTY3NzY5OTg1MiwiZXhwIjoxNjc3NzAxMjkyfQ.EoMUiV417rnsEZkdDpZCT2-WdWUkZjToEUUyTIiZJwtPU2-C61tOd9O7Qc4rPP7ILItRyp5p9MS8IfRUaim60A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admins/brands/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"brands",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ProductList Of Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAZ21haWwyLmNvbSIsImlhdCI6MTY3NzY1MDQxMCwiZXhwIjoxNjc3NjUxODUwfQ.YHxSTWXbtCMk5xsmOG8neKiUsataujk05km95FXjjKBtdVf_l4UWFbUlm6tJK9WFbYqtd7V2S5PtCkXWHibQXg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admins/categories/products/403",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"categories",
+						"products",
+						"403"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Categories for Admins",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW5kdXVzYW5qYXlhQGdtYWlsLmNvbSIsImlhdCI6MTY3NzY5NzQ2MywiZXhwIjoxNjc3Njk4OTAzfQ.fl54ZDM499r3Khlh8KfqvXQ3-_R_TDjKyIs1VT2C7MIqaylrONLcg_X15Y1rkAifKqj-LbU1r8QhnVnCM6tPww",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admins/categories/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"categories",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"testemail@gmail2.com\",\r\n    \"name\":\"Test Admin2\",\r\n    \"password\":\"Test Pass2\",\r\n    \"createdDate\":\"19/2/2022\",\r\n    \"dateOfBirth\":\"16/3/1975\",\r\n    \"role\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admins/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Admins",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW5kdXVzYW5qYXlhQGdtYWlsLmNvbSIsImlhdCI6MTY3NzY5NzY1NCwiZXhwIjoxNjc3Njk5MDk0fQ.QGmZnLX5lbVnmJiyjLKU95iUlpbPbVXFM6nX99IUT5-pN8KxYliu1J0WxmyNyyC30IX_HKOSa4PDx1quTeaKhw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admins/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sanduusanjaya@gmail.com\",\r\n    \"password\":\"sandun\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admins/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"testemail2@gmail.com\",\r\n    \"name\":\"Test User2\",\r\n    \"password\":\"Test Pass2\",\r\n    \"createdDate\":\"19/2/2022\",\r\n    \"dateOfBirth\":\"16/3/1975\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category By ID for Admins",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admins/categories/352",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"categories",
+						"352"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Brand By ID for Admins",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admins/brands/52",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"brands",
+						"52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Test Product\",\r\n    \"category\":{\r\n        \"id\":302\r\n    },\r\n    \"brand\":{\r\n        \"id\":52\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admins/products/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"products",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Brand R Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admins/products/productbrand/302",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"products",
+						"productbrand",
+						"302"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category R Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admins/products/productcategory/302",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins",
+						"products",
+						"productcategory",
+						"302"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User Loan Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"createdDate\":\"01/02/1998\",\r\n        \"loanAmount\":100,\r\n        \"user\":{\r\n            \"id\":2\r\n        },\r\n        \"product\":{\r\n            \"id\":302\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/createloanorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"createloanorder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
